@@ -1,22 +1,77 @@
 ---
-console.log('javascript')
-import HeaderButton from './HeaderButton.astro';
+console.log("javascript");
+import HeaderButton from "./HeaderButton.astro";
 ---
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
-    <div class="mx-auto text-center mb-8 lg:mb-16">
-        <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-            🚀 Astro Louncher
-        </h2>
-        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-            All information about Astro Louncher.
-        </p>
-    </div>
+  <div class="mx-auto text-center mb-8 lg:mb-16">
+    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+      🚀 Astro Louncher
+    </h2>
+    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+      All information about Astro Louncher.
+    </p>
+  </div>
 
-    <nav class="flex flex-col item-center justify-between w-full text-center
-    md:flex-row">
-        <HeaderButton class="text-white" href="/">Ultimas noticias</HeaderButton>
-        <HeaderButton class="text-white" href="/about">Sobre el proyecto</HeaderButton>
-        <HeaderButton class="text-white" href="/oldest">Lo mas viejo</HeaderButton>
-    </nav>
+  <nav
+    class="flex flex-col item-center justify-between w-full text-center
+    md:flex-row"
+  >
+    <HeaderButton class="text-white" href="/">
+        <svg
+        slot="before"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+        <path d="M12 9h.01"></path><path d="M11 12h1v4h1"></path>
+      </svg>
+      Ultimas noticias
+    </HeaderButton>
+
+    <HeaderButton class="text-white" href="/about">
+      <svg
+        slot="before"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+        <path d="M12 9h.01"></path><path d="M11 12h1v4h1"></path>
+      </svg>
+      Sobre el proyecto
+    </HeaderButton>
+
+    <HeaderButton class="text-white" href="/oldest">
+        <svg
+        slot="before"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+        <path d="M12 9h.01"></path><path d="M11 12h1v4h1"></path>
+      </svg>
+      Lo mas viejo
+    </HeaderButton>
+  </nav>
 </header>
